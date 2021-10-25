@@ -4,17 +4,18 @@ body {
 
 .navigation {
     background-color: lavender;
-    border: 2px solid blue;
+    border: 2px solid rgb(118, 118, 141);
     padding: auto;
     margin: auto;
     overflow: hidden;
+    width: 99.5%;
 }
 
 .navigation a {
     float: right;
     color: #e41515;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 12px;
     text-decoration: none;
     font-size: 20px;
 }
@@ -65,33 +66,22 @@ body {
     margin-top: 20px;
 }
 
-.heading {
-    color: #e41515;
-    border: 2px solid rgb(80, 62, 184);
-    align-content: center;
-    text-align: center;
-    margin: 15px;
-    height: 55px;
-    padding: 5px;
-    background-color: lavender;
-}
-
 .navigation span {
     color: #e41515;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
-    font-size: 25px;
-    margin: 300px;
+    font-size: 40px;
     flex-direction: row;
     float: inline-end;
+    margin-right: 80px;
+    font-weight: bolder;
 }
 
-h1 {
+.heading h1 {
     text-align: center;
     color: rgb(201, 16, 93);
     font-size: 50px;
-    background-color: silver;
+    background-color: rgb(235, 230, 230);
 }
 
 #userData {
@@ -109,17 +99,43 @@ h1 {
 }
 
 body {
-    background-color: slateblue;
+    background-color: rgb(150, 88, 150);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* what we're adding */
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
     text-align: center;
     padding: 3px;
-    background-color: silver;
+    background-color: rgb(235, 230, 230);
     color: rgb(216, 13, 13);
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 80px;
+    height: 50px;
+}
+
+.p1 {
+    float: left;
+    font-size: 20px;
+}
+
+.p2 {
+    float: right;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.p3 {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.price {
+    background-color: rgb(235, 230, 230);
 }

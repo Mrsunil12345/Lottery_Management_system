@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./app.js"></script>
 
 
 </head>
@@ -14,18 +15,36 @@
 <body>
     <h1>Enter the details</h1>
     <div id="userData">
-        <form onsubmit="validate()">
+        <form onsubmit="validate()" method="POST" action="/store">
             <label for="name">Name:</label>
             <input type="text" name="name1" id="name" placeholder="Username"><br><br>
             <label for="phone">Phone:</label>
             <input type="tel" name="phone1" id="phone" placeholder="10 digit phone number"><br><br>
-            <label for="email">Email:</label>
-            <input type="text" name="email1" id="email" placeholder="Email address"><br><br>
+            <!-- <label for="email">Email:</label>
+            <input type="text" name="email1" id="email" placeholder="Email address"><br><br> -->
             <label for="City">City:</label>
-            <textarea name="text" id="text" cols="30" rows="5"></textarea>
+            <select name="city" id="city">
+               <option value="varansi">varansi</option>
+               <option value="Banglore">Banglore</option>
+               <option value="Chennai">Chennai</option>
+               <option value="Pune">Pune</option>
+               <option value="Mumbai">Mumbai</option>
+               <option value="Kolkata">Kolkata</option>
+               <option value="Delhi">Delhi</option>
+               <option value="Indore">Indore</option>
+               <option value="Patna">Patna</option>
+               <option value="Jaipur">Jaipur</option>
+           </select>
             <input type="submit" value="submit">
         </form>
     </div>
+
+    <footer>
+        <p class="p1">Author: Sunil Kushawaha </p>
+        <p class="p2"><b>gmail:</b> sunilkushawaha2014@gmail.com</p>
+        <p class="p3">Phone Number:8217219109</p>
+    </footer>
+
 
 
     <script>
@@ -91,10 +110,6 @@
 
         }
     </script>
-    <footer>
-        <p>Author: Sunil Kushawaha</p>
-        <p><a href="sunilkushawaha2014@gmail.com">MrSunil</a></p>
-    </footer>
 
 </body>
 

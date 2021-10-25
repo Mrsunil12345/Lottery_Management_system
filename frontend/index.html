@@ -8,17 +8,20 @@
     <title>Awesome Phone Company </title>
     <link rel="stylesheet" href="style.css">
 
+
 </head>
 
 <body>
     <div class="navigation">
-        <img src="./images/log2.PNG" alt="logo" width="80px" height="55px"><span>Awesome Mobile company</span>
+        <img src="./images/log2.PNG" alt="logo" width="80px" height="55px">
 
-        <a href="http://127.0.0.1:9000/data">Contact us</a>
+        <a href="http://127.0.0.1:9000/contact">Contact us</a>
+        <a href="http://127.0.0.1:9000/admin">Admin </a>
+        <a href="http://127.0.0.1:9000/registration">Registration </a>
 
-        <a href="#">Registration </a>
+        <a href="http://127.0.0.1:9000/">Home </a>
+        <a href="http://127.0.0.1:9000/"><span>Awesome Mobile company</span></a>
 
-        <a href="#">Home </a>
     </div>
     <div class="heading">
         <h1>Our Products</h1>
@@ -27,78 +30,54 @@
     <div class="item">
         <div class="m1">
             <img src="/images/imag11.jfif" alt="logo"><br>
-            <span>Price=23000</span>
+            <span class="price">Price=23000</span>
         </div>
         <div class="m1">
             <img src="/images/imag3.jfif" alt="logo"><br>
-            <span>Price=23000</span>
+            <span class="price">Price=23000</span>
         </div>
         <div class="m1">
             <img src="/images/imag4.jfif" alt="logo"><br>
-            <span>Price=23000</span>
+            <span class="price">Price=23000</span>
         </div><br>
         <div class="m1">
             <img src="/images/imag13.jfif" alt="logo"><br>
-            <span>Price=23000</span>
+            <span class="price">Price=23000</span>
         </div>
         <div class="m1">
             <img src="/images/imag6.jfif" alt="logo"><br>
-            <span>Price=23000</span>
+            <span class="price">Price=23000</span>
         </div>
         <div class="m1">
             <img src="/images/imag8.jfif" alt="logo"><br>
-            <span>Price=23000</span>
+            <span class="price">Price=23000</span>
         </div>
         <div class="m1">
             <img src="/images/imag9.jfif" alt="logo"><br>
-            <span>Price=23000</span>
+            <span class="price">Price=23000</span>
         </div>
         <div class="m1">
             <img src="/images/imag12.jfif" alt="logo"><br>
-            <span>Price=23000</span>
+            <span class="price">Price=23000</span>
 
         </div>
         <div class="m1">
             <img src="/images/imag14jfif.jfif" alt="logo"><br>
-            <span>Price=23000</span>
+            <span class="price">Price=23000</span>
 
         </div>
         <div class="m1">
             <img src="/images/imag15.jfif" alt="logo"><br>
-            <span>Price=23000</span>
+            <span class="price">Price=23000</span>
 
         </div>
     </div>
 
-    <script>
-        var req = new XMLHttpRequest();
-        var url = '/data';
-
-        req.open('GET', url, true); // set this to POST if you would like
-        req.addEventListener('load', onLoad);
-        req.addEventListener('error', onError);
-
-        req.send();
-
-        function onLoad() {
-            var response = this.response;
-            var parsedResponse = JSON.parse(response);
-
-            // access your data newly received data here and update your DOM with appendChild(), findElementById(), etc...
-            var messageToDisplay = parsedResponse['message'];
-            console.log("Hello inside the kksmkad");
-            // append child (with text value of messageToDisplay for instance) here or do some more stuff
-        }
-
-        function onError() {
-            // handle error here, print message perhaps
-            console.log('error receiving async AJAX call');
-        }
-    </script>
-
     <footer>
-        <p>Author: Sunil Kushawaha</p>
-        <p><a href="sunilkushawaha2014@gmail.com">MrSunil</a></p>
+        <p class="p1">Author: Sunil Kushawaha </p>
+        <p class="p2"><b>gmail:</b> sunilkushawaha2014@gmail.com</p>
+        <p class="p3">Phone Number:8217219109</p>
+
     </footer>
 
 

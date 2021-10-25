@@ -8,7 +8,9 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(express.static('./frontend'))
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const { json } = require('body-parser');
+const { deflateRawSync } = require('zlib');
 const url = 'mongodb://localhost:27017/myapp'
 mongoose.connect(url)
 const db = mongoose.connection
@@ -25,24 +27,34 @@ app.get('/registration', (req, res) => {
 
 
 })
+app.get('/admin', (req, res) => {
+    //console.log('2');
+    res.sendFile(path.join(__dirname + '/frontend/admin.html'))
+})
+app.get('/contact', (req, res) => {
+    // console.log('2');
+    res.sendFile(path.join(__dirname + '/frontend/contactUs.html'))
+})
 app.post('/store', (req, res) => {
-    console.log('inside post');
+
     const name = req.body.name1
     const phone = req.body.phone1
-    const email = req.body.email1
+    const city = req.body.city
     const data = {
-        'name': name,
-        'phone': phone,
-        'email': email
-    }
-    console.log(data);
+            'name': name,
+            'phone': phone,
+            'city': city,
+            'status': false
+        }
+        // console.log(data);
     db.collection('Info').insertOne(data, (err, collection) => {
         if (err) {
             throw console.error();
         } else {
-            console.log('inseted');
+            console.log('data inseted');
         }
     })
+    res.send("data inserted")
 
 
 
@@ -52,18 +64,31 @@ app.get('/data', function(req, res) {
         if (err) {
             throw console.error();
         } else {
-            console.log(result);
+            //console.log(result);
 
         }
         var dataToSendToClient = result;
-        var res = _.sample(result, 2)
-        var JSONdata = JSON.stringify(res);
+
+        var JSONdata = JSON.stringify(dataToSendToClient);
         res.send(JSONdata);
     })
 
 
 });
 
+app.post('/update', (req, res) => {
+    var content = ''
+    req.on("data", (data) => {
+        content = content + data
+        console.log(content);
+        var obj = JSON.parse(content);
+        console.log(obj.d1);
+        db.Info.aggregate([{
+                $addFields: { "status": false }
+            }])
+            //  db.Info.update()
+    });
+})
 
 
 app.listen(9000, () => {
