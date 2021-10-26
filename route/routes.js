@@ -40,8 +40,6 @@ router.post('/store', (req, res) => {
             console.log('data inseted');
         }
     })
-    res.send("data inserted")
-
 
 
 })
@@ -53,14 +51,9 @@ router.get('/data', function(req, res) {
             //console.log(result);
 
         }
-        var dataToSendToClient = result;
-
-        var JSONdata = JSON.stringify(dataToSendToClient);
-        res.send(JSONdata);
     })
 
 
-});
 
 router.post('/update', (req, res) => {
     var content = ''
