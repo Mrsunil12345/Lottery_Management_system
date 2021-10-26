@@ -6,13 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="registration.css">
     <script src="app.js"></script>
 
 
 </head>
 
 <body>
+    <div class="navigation">
+        <img src="./images/log2.PNG" alt="logo" width="80px" height="55px">
+
+        <a href="http://127.0.0.1:9000/contact">Contact us</a>
+        <a href="http://127.0.0.1:9000/admin">Admin </a>
+        <a href="http://127.0.0.1:9000/registration">Registration </a>
+
+        <a href="http://127.0.0.1:9000/">Home </a>
+        <a href="http://127.0.0.1:9000/"><span>Awesome Mobile company</span></a>
+
+    </div>
     <h1>Enter the details</h1>
     <div id="userData">
         <form onsubmit="validate()" method="POST" action="/store">
@@ -34,7 +45,7 @@
                <option value="Indore">Indore</option>
                <option value="Patna">Patna</option>
                <option value="Jaipur">Jaipur</option>
-           </select>
+           </select><br>
             <input type="submit" value="submit">
         </form>
     </div>

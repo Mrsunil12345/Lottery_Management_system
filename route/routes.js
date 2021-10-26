@@ -1,20 +1,22 @@
 const express = require('express')
 const router = express.Router()
 const path = require('path')
+const mongoose = require('mongoose')
+const db = mongoose.model('User')
 
 
 router.get('/', (req, res) => {
-    console.log('1');
+
     res.render('index')
 })
 router.get('/registration', (req, res) => {
-    console.log('2');
+
     res.render('registration')
 
 
 })
 router.get('/admin', (req, res) => {
-    //console.log('2');
+
     res.render('admin')
 })
 router.get('/contact', (req, res) => {
@@ -22,36 +24,35 @@ router.get('/contact', (req, res) => {
     res.render('contactUs')
 })
 router.post('/store', (req, res) => {
+    const user = new db()
+    user.name = req.body.name1
+    user.phone = req.body.phone1
+    user.city = req.body.city
+    user.status = false
 
-    const name = req.body.name1
-    const phone = req.body.phone1
-    const city = req.body.city
-    const data = {
-            'name': name,
-            'phone': phone,
-            'city': city,
-            'status': false
-        }
-        // console.log(data);
-    db.collection('Info').insertOne(data, (err, collection) => {
-        if (err) {
-            throw console.error();
+    console.log(req.body);
+    user.save((err, data) => {
+        if (!err) {
+            res.redirect('/')
         } else {
-            console.log('data inseted');
+            console.log("error")
         }
     })
 
 
 })
 router.get('/data', function(req, res) {
-    db.collection('Info').find({}).toArray((err, result) => {
-        if (err) {
-            throw console.error();
+    db.find((err, data) => {
+        if (!err) {
+            var dataToSendToClient = data;
+            var JSONdata = JSON.stringify(dataToSendToClient);
+            res.send(JSONdata);
         } else {
-            //console.log(result);
-
+            console.log('error')
         }
     })
+})
+
 
 
 
@@ -61,11 +62,26 @@ router.post('/update', (req, res) => {
         content = content + data
         console.log(content);
         var obj = JSON.parse(content);
-        console.log(obj.d1);
-        db.Info.aggregate([{
-                $addFields: { "status": false }
-            }])
-            //  db.Info.update()
+        const id1 = (obj.d1);
+        const id2 = (obj.d2)
+        db.updateOne({ _id: id1 }, { $set: { status: true } }, (err, result) => {
+            if (err) {
+                console.log(err);
+
+            } else {
+                console.log(result);
+            }
+        })
+        db.updateOne({ _id: id2 }, { $set: { status: true } }, (err, result) => {
+            if (err) {
+                console.log(err);
+
+            } else {
+                console.log(result);
+            }
+        })
+
+
     });
 })
 

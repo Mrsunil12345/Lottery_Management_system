@@ -11,23 +11,38 @@
     <script src="app.js"></script>
 
     <body>
+        <div class="navigation">
+            <img src="./images/log2.PNG" alt="logo" width="80px" height="55px">
+
+            <a href="http://127.0.0.1:9000/contact">Contact us</a>
+            <a href="http://127.0.0.1:9000/admin">Admin </a>
+            <a href="http://127.0.0.1:9000/registration">Registration </a>
+
+            <a href="http://127.0.0.1:9000/">Home </a>
+            <a href="http://127.0.0.1:9000/"><span>Awesome Mobile company</span></a>
+
+        </div><br>
+        <h2>Kindly enter your details with subject.. </h2>
         <div class="container">
             <form action="#">
 
-                <label for="fname">Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="fname">Name:</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
 
 
-                <label for="country">Country</label>
+                <label for="country">Country:</label>
                 <select id="country" name="country">
                     <option value="ind">India</option>
             <option value="australia">Australia</option>
             <option value="canada">Canada</option>
             <option value="usa">USA</option>
-          </select>
+            <option value="australia">Germany</option>
+            <option value="canada">France</option>
+            <option value="usa">Uk</option>
+          </select><br>
 
                 <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea><br>
 
                 <input type="submit" value="Submit">
 

@@ -14,7 +14,7 @@ function check() {
 
         // access your data newly received data here and update your DOM with appendChild(), findElementById(), etc...
         var messageToDisplay = parsedResponse['message'];
-
+        console.log(parsedResponse);
         const randomSelection = (n) => {
             let newArr = [];
             if (n >= parsedResponse.length) {
@@ -40,17 +40,10 @@ function check() {
             'd2': d2
         }
 
-
         function sendData() {
             console.log('inside the senddata function');
             var xhr = new XMLHttpRequest;
             var url = '/update';
-            // xhr.onreadystatechange = () => {
-            //     if (this.readyState == 4 && this.status == 200) {
-            //         // console.log("hello post");
-            //         console.log("inside the onredy state change");
-            //     }
-
             console.log("after onready");
             xhr.open('POST', url, true);
             //xhr.setRequestHeader('Content-Type: application/json')

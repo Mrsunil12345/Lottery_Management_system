@@ -1,0 +1,120 @@
+.navigation {
+    background-color: lavender;
+    border: 2px solid rgb(118, 118, 141);
+    padding: auto;
+    margin: auto;
+    overflow: hidden;
+    width: 99.5%;
+}
+
+body {
+    background-color: rgb(150, 88, 150);
+}
+
+.navigation a {
+    float: right;
+    color: #e41515;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navigation a:hover {
+    background-color: khaki;
+    color: lightseagreen;
+}
+
+.navigation a:active {
+    background-color: white
+}
+
+#userData {
+    border: 2px solid rgb(235, 230, 230);
+    width: 500px;
+    height: 300px;
+    color: rgb(216, 13, 13);
+    font-size: 17px;
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: lavender;
+    margin-left: 30%;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: lavender;
+    color: rgb(216, 13, 13);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+.p1 {
+    float: left;
+    font-size: 20px;
+}
+
+.p2 {
+    float: right;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.p3 {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+input[type=text],
+input[type="tel"],
+select,
+textarea {
+    width: 50%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: #e41515;
+    font-size: 50px;
+    background-color: lavender;
+}
+
+.navigation span {
+    color: #e41515;
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+    flex-direction: row;
+    float: inline-end;
+    margin-right: 80px;
+    font-weight: bolder;
+}
