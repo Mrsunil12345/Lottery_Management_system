@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="registration.css">
-    <script src="app.js"></script>
-
 
 </head>
 
@@ -17,7 +15,7 @@
         <img src="./images/log2.PNG" alt="logo" width="80px" height="55px">
 
         <a href="http://127.0.0.1:9000/contact">Contact us</a>
-        <a href="http://127.0.0.1:9000/admin">Admin </a>
+
         <a href="http://127.0.0.1:9000/registration">Registration </a>
 
         <a href="http://127.0.0.1:9000/">Home </a>
@@ -26,13 +24,11 @@
     </div>
     <h1>Enter the details</h1>
     <div id="userData">
-        <form onsubmit="validate()" method="POST" action="/store">
+        <form onsubmit=" return validate()" method="POST" action="/store">
             <label for="name">Name:</label>
             <input type="text" name="name1" id="name" placeholder="Username"><br><br>
             <label for="phone">Phone:</label>
             <input type="tel" name="phone1" id="phone" placeholder="10 digit phone number"><br><br>
-            <!-- <label for="email">Email:</label>
-            <input type="text" name="email1" id="email" placeholder="Email address"><br><br> -->
             <label for="City">City:</label>
             <select name="city" id="city">
                <option value="varansi">varansi</option>
@@ -59,58 +55,43 @@
 
 
     <script>
+        //Validating the user name and phone number
         function validate() {
 
-            var name, mail, mobile;
+            var name, phone;
             name = document.getElementById('name').value;
             mobile = document.getElementById('phone').value;
-            mail = document.getElementById('email').value;
 
-            var check;
-            check = checkName(name);
-            if (check) {
+            //validating the name of the user
+            var check1;
+            check1 = checkName(name);
+            if (check1) {
                 alert('Invalid first name. Please Enter Your First Name.');
 
                 document.getElementById('name').value = "";
                 document.getElementById('name').focus();
-                return;
+                return false;
             }
-
-            check = checkMail(mail);
-            if (check) {
-                alert('Invalid email address. Please enter mail ID in proper format (abc@ex.com).')
-
-                document.getElementById('email').value = "";
-                document.getElementById('email').focus();
-                return;
-            }
-
-            check = checkPhoneNum(mobile);
-            if (check) {
+            //validating the phone number of the user
+            var check2 = checkPhoneNum(mobile);
+            if (check2) {
                 alert('Invalid mobile number. Please enter 10 digit phone number.');
 
                 document.getElementById('phone').value = "";
                 document.getElementById('phone').focus();
-                return;
+                return false;
             }
 
 
 
             //name validation
             function checkName(name) {
-                var check = /\W|[0-9]|_/gi;
+                var check = /([A-Z][a-z]{10,} )([A-Z][a-z]{10,} )?([A-Z][a-z]{10,})/gi;
                 if (check.test(name) || name === "") {
                     return true;
                 }
             }
 
-            function checkMail(mail) {
-                var check = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-                if (!check.test(mail) || mail.length === 0) {
-                    return true;
-                }
-            }
 
             function checkPhoneNum(mobNum) {
                 var check = /\D/gi; //\D - checks for any non digit char

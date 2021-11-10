@@ -1,4 +1,4 @@
-require('./model/db')
+require('./model/db')//DataBAse connection
 const express = require('express')
 const app = express();
 const path = require('path')
@@ -13,13 +13,13 @@ app.use(express.urlencoded({
 }));
 
 
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + '/public'))//Setting the static folder
 
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');//Setting the view engine
 
 
 
-app.listen(9000, () => {
+app.listen(9000, () => {//Listening to port 9000
     console.log("server is runing on port 9000");
 })
 app.use('/', router)
