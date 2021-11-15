@@ -1,10 +1,11 @@
 .navigation {
-    background-color: lavender;
-    border: 2px solid rgb(118, 118, 141);
+    background: rgba(0, 0, 0, 0.1);
+    /* border: 2px solid rgb(118, 118, 141); */
     padding: auto;
     margin: auto;
     overflow: hidden;
     width: 99.5%;
+    font-family: 'Brush Script MT', cursive;
 }
 
 .navigation a {
@@ -13,7 +14,8 @@
     text-align: center;
     padding: 10px 12px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
+    font-family: 'Brush Script MT', cursive;
 }
 
 .navigation a:hover {
@@ -41,12 +43,13 @@
     max-width: 33.333%;
     padding: 0 10px;
     height: 240px;
+    background: transparent;
 }
 
 .item .m1 img {
     width: 200px;
     height: 200px;
-    border: 2px solid rgb(80, 62, 184);
+    /* border: 2px solid rgb(80, 62, 184); */
     border-radius: 10px;
     padding: 5px;
 }
@@ -55,7 +58,7 @@
     color: #e41515;
     font-weight: bolder;
     font-family: serif;
-    border: 2px solid rgb(80, 62, 184);
+    /* border: 2px solid rgb(80, 62, 184); */
     border-radius: 6px;
     margin: 60px;
     align-self: center;
@@ -71,13 +74,15 @@
     float: inline-end;
     margin-right: 80px;
     font-weight: bolder;
+    font-family: 'Brush Script MT', cursive;
 }
 
 .heading h1 {
     text-align: center;
-    color: rgb(201, 16, 93);
-    font-size: 50px;
-    background-color: rgb(235, 230, 230);
+    color: #e41515;
+    font-size: 40px;
+    background: rgba(0, 0, 0, 0.1);
+    font-family: 'Brush Script MT', cursive;
 }
 
 #userData {
@@ -90,48 +95,58 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    background-color: silver;
+    background: rgba(0, 0, 0, 0.1);
     margin-left: 40%;
+    font-family: 'Brush Script MT', cursive;
 }
 
 body {
-    background-color: rgb(150, 88, 150);
+    /* background-color: rgb(150, 88, 150); */
     min-height: 100vh;
     margin: 0;
     padding: 0;
     /* what we're adding */
     display: flex;
     flex-direction: column;
+    background-image: url('/images/back2.jfif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
 footer {
     text-align: center;
     padding: 3px;
-    background-color: rgb(235, 230, 230);
+    background: rgba(0, 0, 0, 0.1);
     color: rgb(216, 13, 13);
     position: relative;
     bottom: 0;
     left: 0;
     right: 0;
     height: 50px;
+    font-family: 'Brush Script MT', cursive;
 }
 
 .p1 {
     float: left;
-    font-size: 20px;
+    font-size: 25px;
+    font-family: 'Brush Script MT', cursive;
 }
 
 .p2 {
     float: right;
-    font-size: 20px;
+    font-size: 25px;
     text-decoration: none;
+    font-family: 'Brush Script MT', cursive;
 }
 
 .p3 {
-    font-size: 20px;
+    font-size: 25px;
     text-decoration: none;
+    font-family: 'Brush Script MT', cursive;
 }
 
 .price {
     background-color: rgb(235, 230, 230);
+    font-family: 'Brush Script MT', cursive;
 }

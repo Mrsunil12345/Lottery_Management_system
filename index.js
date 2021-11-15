@@ -17,9 +17,10 @@ app.use(express.static(__dirname + '/public'))//Setting the static folder
 
 app.set('view engine', 'ejs');//Setting the view engine
 
+app.use("/",router)
 
-
-app.listen(9000, () => {//Listening to port 9000
+module.exports=app.listen(9000, () => {//Listening to port 9000
     console.log("server is runing on port 9000");
 })
-app.use('/', router)
+
+

@@ -44,6 +44,22 @@ router.post('/contactMe', (req, res) => {
     
 })
 
+router.get('/adminlogin',(req,res)=>{
+    res.render('adminLogin')
+})
+
+router.post('/adminValidation',(req,res)=>{
+    const Uname=req.body.name1
+    const password=req.body.password
+
+    if(Uname==='sunil' && password==='sunil123'){
+        res.render('admin')
+    }
+    else{
+        res.redirect('adminLogin')
+    }
+})
+
 //Route for the post request from user registration  page
 router.post('/store', (req, res) => {
     const user = new db()
