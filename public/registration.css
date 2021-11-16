@@ -89,7 +89,7 @@ textarea {
     /* Full width */
     padding: 12px;
     /* Some padding */
-    border: 1px solid #ccc;
+    border: 1px solid rgb(202, 20, 20);
     /* Gray border */
     border-radius: 4px;
     /* Rounded borders */
@@ -99,6 +99,7 @@ textarea {
     /* Add a top margin */
     margin-bottom: 16px;
     background: rgba(247, 236, 247, 1);
+    font-size: 25px;
     /* Bottom margin */
     resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
 }
@@ -110,6 +111,7 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 25px;
     font-family: 'Brush Script MT', cursive;
     ;
 }
@@ -138,7 +140,7 @@ input[type=password] {
     /* Full width */
     padding: 12px;
     /* Some padding */
-    border: 1px solid #ccc;
+    border: 1px solid rgb(180, 17, 17);
     /* Gray border */
     border-radius: 4px;
     /* Rounded borders */
@@ -149,6 +151,7 @@ input[type=password] {
     margin-bottom: 16px;
     /* Bottom margin */
     resize: vertical;
+    font-size: 25px;
     /* Allow the user to vertically resize the textarea (not horizontally) */
     font-family: 'Brush Script MT', cursive;
     background: rgba(247, 236, 247, 1);
@@ -158,6 +161,6 @@ label[for='name'],
 label[for='phone'],
 label[for='City'],
 label[for='Password'] {
-    font-size: 30px;
+    font-size: 35px;
     color: rgb(226, 57, 45, 1);
 }

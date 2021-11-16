@@ -22,7 +22,7 @@
         </div><br>
         <h2>Kindly enter your details with subject.. </h2>
         <div class="container">
-            <form action="/contactMe" method="POST">
+            <form onsubmit="return validate()" action="/contactMe" method="POST">
 
                 <label for="fname">Name:</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
@@ -40,7 +40,7 @@
           </select><br>
 
                 <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea><br>
+                <textarea id="subject1" name="subject" placeholder="Write something.." style="height:100px"></textarea><br>
 
                 <input type="submit" value="Submit">
 
@@ -51,6 +51,54 @@
             <p class="p2"><b>gmail:</b> sunilkushawaha2014@gmail.com</p>
             <p class="p3">Phone Number:8217219109</p>
         </footer>
+
+        <script>
+            //Validating the user name and phone number
+            function validate() {
+
+                var name, subject;
+                name = document.getElementById('fname').value;
+                subject = document.getElementById('subject1').value
+
+                //validating the name of the user
+                var check1;
+                check1 = checkName(name);
+                if (check1) {
+                    alert('Invalid name. Please Enter Your Name.');
+
+                    document.getElementById('fname').value = "";
+                    document.getElementById('fname').focus();
+                    return false;
+                }
+                //validating the textarea 
+                var check2 = checkPhoneNum(subject);
+                if (check2) {
+                    alert('Subject field can not be blank Kindly fill the information');
+
+                    document.getElementById('subject').value = "";
+                    document.getElementById('subject').focus();
+                    return false;
+                }
+
+
+
+                //name validation
+                function checkName(name) {
+                    var check = /([A-Z][a-z]{10,} )([A-Z][a-z]{10,} )?([A-Z][a-z]{10,})/gi;
+                    if (check.test(name) || name === "") {
+                        return true;
+                    }
+                }
+
+
+                function checkPhoneNum(subject) {
+                    if (subject.value === null) {
+                        return true;
+                    }
+                }
+
+            }
+        </script>
 
     </body>
 

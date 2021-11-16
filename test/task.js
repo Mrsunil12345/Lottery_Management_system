@@ -66,15 +66,15 @@ describe('Unit testing the admin page', function() {
 //testing the mongodb connection
 describe('Reading Details of User from database', () => {
     it('Finds user with the name', (done) => {
-        db.findOne({ name: 'sunil' })
+        db.findOne({ name: 'Sweta Maurya' })
             .then((user) => {
-                assert(user.name === 'sunil');
+                assert(user.name === 'Sweta Maurya');
                 done();
             });
     })
 })
 
-//
+//testing the routes for the ajax request for the sending the data from server to client
 
 describe('Unit ajax request /data', function() {
 

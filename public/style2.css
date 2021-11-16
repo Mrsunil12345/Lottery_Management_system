@@ -5,7 +5,7 @@ textarea {
     /* Full width */
     padding: 12px;
     /* Some padding */
-    border: 1px solid #ccc;
+    border: 1px solid rgb(185, 17, 17);
     /* Gray border */
     border-radius: 4px;
     /* Rounded borders */
@@ -16,6 +16,7 @@ textarea {
     margin-bottom: 16px;
     /* Bottom margin */
     resize: vertical;
+    font-size: 22px;
     /* Allow the user to vertically resize the textarea (not horizontally) */
     font-family: 'Brush Script MT', cursive;
     background: rgba(247, 236, 247, 1);

@@ -6,36 +6,30 @@ const db = mongoose.model('User')
 
 //Route for the home page
 router.get('/', (req, res) => {
-
     res.render('index')
 })
 
 //Route for the Registration page
 router.get('/registration', (req, res) => {
-
     res.render('registration')
 })
 
 //Route for the admin page
 router.get('/admin', (req, res) => {
-
     res.render('admin')
 })
 
 //Route for the contactUs page
 router.get('/contact', (req, res) => {
-    // console.log('2');
     res.render('contactUs')
 })
 
 //Route for the Status field
 router.get('/status', (req, res) => {
-    // console.log('2');
     res.render('status')
 })
 
 router.get('/contactstatus', (req, res) => {
-    // console.log('2');
     res.render('contactstatus')
 })
 
